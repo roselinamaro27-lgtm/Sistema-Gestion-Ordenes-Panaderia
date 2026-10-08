@@ -1,0 +1,41 @@
+﻿@model SistemaGestionOrdenesPanaderia.Models.Pedido
+
+<h1>Editar Pedido</h1>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="ClienteId">Cliente</label>
+        <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId">
+            <option value="">Seleccione un cliente</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Fecha">Fecha</label>
+        <input asp-for="Fecha" class="form-control" type="date" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Total">Total</label>
+        <input asp-for="Total" class="form-control" type="number" step="0.01" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estado">Estado</label>
+        <select asp-for="Estado" class="form-control">
+            <option value="Pendiente">Pendiente</option>
+            <option value="En preparación">En preparación</option>
+            <option value="Completado">Completado</option>
+            <option value="Cancelado">Cancelado</option>
+        </select>
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+
+</form>

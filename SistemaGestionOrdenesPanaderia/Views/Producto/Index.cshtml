@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SistemaGestionOrdenesPanaderia.Models.Producto>
+
+<h1>Productos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo Producto</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model)
+        {
+            <tr>
+                <td>@producto.Nombre</td>
+                <td>@producto.Precio</td>
+                <td>@producto.Stock</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@producto.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@producto.Id">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@producto.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

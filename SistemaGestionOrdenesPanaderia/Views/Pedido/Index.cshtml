@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SistemaGestionOrdenesPanaderia.Models.Pedido>
+
+<h1>Pedidos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo Pedido</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Fecha</th>
+            <th>Total</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pedido in Model)
+        {
+            <tr>
+                <td>@pedido.ClienteId</td>
+                <td>@pedido.Fecha</td>
+                <td>@pedido.Total</td>
+                <td>@pedido.Estado</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@pedido.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@pedido.Id">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@pedido.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
