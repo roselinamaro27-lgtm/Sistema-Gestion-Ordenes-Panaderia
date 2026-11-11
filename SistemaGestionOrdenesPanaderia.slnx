@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="Panaderia.API/Panaderia.API.csproj" Id="19850575-b329-4c70-ade4-bf5ecaadb48a" />
+  <Project Path="Panaderia.Domain/Panaderia.Domain.csproj" Id="c74f8da8-aa79-4144-baaa-b0c34c8b85fa" />
+  <Project Path="Panaderia.Infrastructure/Panaderia.Infrastructure.csproj" Id="1953e8da-b9e2-48c9-addd-d17f3246c331" />
   <Project Path="SistemaGestionOrdenesPanaderia/SistemaGestionOrdenesPanaderia.csproj" />
 </Solution>
