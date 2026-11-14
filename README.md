@@ -1,0 +1,1 @@
+Organización y seguimiento del desarrollo del Sistema de Gestión de Órdenes para Panadería. Este proyecto tiene como objetivo administrar los productos, clientes y pedidos mediante una aplicación que permita realizar operaciones CRUD y gestionar la información de manera eficiente.
